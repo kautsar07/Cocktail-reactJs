@@ -20,11 +20,27 @@ export default function Navbar() {
             {close ? (
               <div className="wrap-search-open">
                 <input type="text" placeholder="Search recipe drink..." />
-                <BsSearch onClick={() => setClose(false)} color="#2E4227" />
               </div>
             ) : (
               <div className="wrap-search-close">
-                <BsSearch onClick={() => setClose(true)} color="#2E4227" />
+                <input type="text" placeholder="Search recipe drink..." />
+              </div>
+            )}
+            {close ? (
+              <div className="icon-search-open">
+                <BsSearch
+                  onClick={() => setClose(false)}
+                  color="#2E4227"
+                  size={15}
+                />
+              </div>
+            ) : (
+              <div className="icon-search-close">
+                <BsSearch
+                  onClick={() => setClose(true)}
+                  color="#2E4227"
+                  size={15}
+                />
               </div>
             )}
           </div>
