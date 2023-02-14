@@ -69,10 +69,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .icon-search-close {
   border-radius: 15px;
-  animation: closeIcon 0.25s linear;
+  animation: closeIcon 0.2s linear;
 }
 .wrap-search-open input {
   width: 100%;

@@ -6,7 +6,9 @@ export default function Card(props) {
   const [like, setLike] = useState(false);
   return (
     <div className="card">
-      <img src={props.imgUrl} alt="" />
+      <div className="card-img">
+        <img src={props.imgUrl} alt="" />
+      </div>
       <div className="wrap-desc">
         <h6>{props.titleDrinks}</h6>
         <div className="desc">
@@ -29,7 +31,10 @@ export default function Card(props) {
         {like ? (
           <FcLike className="likeTrue" onClick={() => setLike(false)} />
         ) : (
-          <FcLikePlaceholder className="likeFalse" onClick={() => setLike(true)} />
+          <FcLikePlaceholder
+            className="likeFalse"
+            onClick={() => setLike(true)}
+          />
         )}
       </div>
     </div>

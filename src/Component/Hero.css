@@ -7,32 +7,49 @@ section {
 }
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
   background: var(--color-bg3);
   max-width: 300px;
-  height: 500px;
+  height: fit-content;
   border-radius: 15px;
   padding: 4px;
 }
+.card-img {
+  display: block;
+  overflow: hidden;
+  border-radius: 13px;
+  height: 400px;
+}
 
-.card img {
+.card-img img {
   width: 99.5%;
-  height: 80%;
+  height: 100%;
   object-fit: cover;
   border-radius: 13px;
   border: 1px solid var(--color-bg2);
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card img:hover {
+  transform: scale(1.5);
 }
 .wrap-desc {
   padding: 3px 15px;
   background: var(--color-bg1);
   height: 17%;
   border-radius: 12px;
-  color: var(--color-bg2);
+  color: var(--color-white);
   border: 1px solid var(--color-bg2);
 }
 .wrap-desc h6 {
   font-size: 17px;
   line-height: 2rem;
-  border-bottom:1px solid var(--color-bg2) ;
+  border-bottom: 1px solid var(--color-bg2);
 }
 .desc {
   width: 100%;
@@ -57,13 +74,14 @@ section {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: var(--color-bg2);
+  background: var(--color-white);
   width: 50px;
   height: 50px;
   border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid var(--color-bg4);
 }
 
 .ordinary {
@@ -71,23 +89,37 @@ section {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
-.likeTrue{
-    font-size: 35px;
-    opacity: 1;
-    animation: likeTrue 0.2s linear;
+.likeTrue {
+  font-size: 35px;
+  opacity: 1;
+  animation: likeTrue 0.2s linear;
 }
 
 @keyframes likeTrue {
-    from{width: 0;}
-    to{width: 40px;}
+  from {
+    width: 0;
+  }
+  to {
+    width: 40px;
+  }
 }
-.likeFalse{
-    font-size: 35px;
-    opacity: 1;
-    animation: likeFalse 0.2s linear;
+.likeFalse {
+  font-size: 35px;
+  opacity: 1;
+  animation: likeFalse 0.2s linear;
 }
 
 @keyframes likeFasle {
-    from{width: 40px;}
-    to{width: 0px;}
+  from {
+    width: 40px;
+  }
+  to {
+    width: 0px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ordinary {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -12,7 +12,7 @@ export default function Hero() {
       const drink = await axios.get(
         `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink`
       );
-      setDrinks(drink.data.drinks.slice(0, 10));
+      setDrinks(drink.data.drinks);
     } catch (error) {
       console.error(error);
     }
