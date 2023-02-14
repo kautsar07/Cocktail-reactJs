@@ -12,12 +12,15 @@ code {
     monospace;
 }
  :root{
-  --color-bg1:#2E4227;
-  --color-bg2:#E4EEDD;
+  --color-bg1:#6096B4;
+  --color-bg2:#EEE9DA;
+  --color-bg3:#93BFCF;
+  --color-bg4:#BDCDD6;
+
   --color-white: #FFF;
   --color-black: #111;
  }
- h1{
+ h1,h2,h3,h4,h5,h6{
   margin: 0;
  }
  p{

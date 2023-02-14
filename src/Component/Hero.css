@@ -1,0 +1,93 @@
+section {
+  background: var(--color-bg2);
+}
+
+.wrap-hero {
+  padding: 50px 0;
+}
+.card {
+  position: relative;
+  background: var(--color-bg3);
+  max-width: 300px;
+  height: 500px;
+  border-radius: 15px;
+  padding: 4px;
+}
+
+.card img {
+  width: 99.5%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 13px;
+  border: 1px solid var(--color-bg2);
+}
+.wrap-desc {
+  padding: 3px 15px;
+  background: var(--color-bg1);
+  height: 17%;
+  border-radius: 12px;
+  color: var(--color-bg2);
+  border: 1px solid var(--color-bg2);
+}
+.wrap-desc h6 {
+  font-size: 17px;
+  line-height: 2rem;
+  border-bottom:1px solid var(--color-bg2) ;
+}
+.desc {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+.desc p {
+  font-size: 12px;
+}
+.text {
+  width: 100%;
+}
+.rating {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.like {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--color-bg2);
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ordinary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.likeTrue{
+    font-size: 35px;
+    opacity: 1;
+    animation: likeTrue 0.2s linear;
+}
+
+@keyframes likeTrue {
+    from{width: 0;}
+    to{width: 40px;}
+}
+.likeFalse{
+    font-size: 35px;
+    opacity: 1;
+    animation: likeFalse 0.2s linear;
+}
+
+@keyframes likeFasle {
+    from{width: 40px;}
+    to{width: 0px;}
+}

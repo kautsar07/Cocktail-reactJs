@@ -96,7 +96,7 @@ nav {
   border-radius: 15px 0 0 15px;
   padding: 8px;
   opacity: 0;
-  animation: close 0.2s linear;
+  animation: close 0.15s linear;
 }
 .wrap-search-close input {
   position: absolute;
